@@ -1,14 +1,12 @@
 #!/bin/bash
 
-curl -o /tmp/ssh_keys https://pookey.co.uk/files/ssh
-mkdir /root/.ssh
-cat /tmp/ssh_keys > /root/.ssh/authorized_keys
-
 apt-get update
 apt-get upgrade -y
 apt-get install puppet librarian-puppet -y
-
+cd /tmp
+git clone git@github.com:pookey/server-bootstrap.git
 cd /tmp/server-bootstrap/puppet/
 librarian-puppet init
+puppet apply ./manifests/site.pp  --modulepath /tmp/server-bootstrap/puppet/modules/
 
 

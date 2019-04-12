@@ -1,3 +1,4 @@
 forge "https://forge.puppetlabs.com"
 
 mod 'hardening-os_hardening', '2.2.2'
+mod 'hardening-ssh_hardening', '1.0.5'

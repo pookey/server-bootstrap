@@ -6,8 +6,9 @@ cat /tmp/ssh_keys > /root/.ssh/authorized_keys
 
 apt-get update
 apt-get upgrade -y
-apt-get install git -y
+apt-get install puppet librarian-puppet -y
 
-
+cd /tmp/server-bootstrap/puppet/
+librarian-puppet init
 
 

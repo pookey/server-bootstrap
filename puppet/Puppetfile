@@ -1,0 +1,3 @@
+forge "https://forge.puppetlabs.com"
+
+mod 'hardening-os_hardening', '2.2.2'

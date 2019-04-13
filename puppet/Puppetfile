@@ -1,4 +1,4 @@
-forge "https://forge.puppetlabs.com"
+forge "https://forgeapi.puppetlabs.com"
 
 mod 'saz-sudo', '6.0.0'
 mod 'hardening-os_hardening', '2.2.2'

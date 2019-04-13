@@ -1,11 +1,18 @@
 Class { 'os_hardening': }
 Class { 'ssh_hardening': }
 
+class { 'sudo': }
+sudo::conf { 'admins':
+  priority => 10,
+  content  => '%admins ALL=(ALL) NOPASSWD: ALL',
+}
+
 
 user { 'pookey':
    ensure           => 'present',
    home             => '/home/pookey',
    managehome       => true,
+   groups           => ['admin'],
 }
 
 ssh_authorized_key { 'pookey@pookey.co.uk':
